@@ -11,6 +11,8 @@ func main (){
 	switch i.(type) {
 	case int:
 		fmt.Println("i is an int")
+		break
+		fmt.Println("i is an int") //Code will break and this code won't print
 	case float64:
 		fmt.Println("i is a float64")
 	case string:
