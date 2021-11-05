@@ -1,18 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"io/ioutil"
+	"log"
+	"net/http"
+)
 
 
 
 func main (){
-	//Defer : invoke function but defer it's applicationi to later
-		defer fmt.Println("start")
-		defer fmt.Println("middle")
-		defer fmt.Println("end")
+	res, err := http.Get("http://www.google.com/robots.txt")
+	if err != nil{
+		log.Fatal(err)
+	}
+	defer res.Body.Close()
+	robots, err := ioutil.ReadAll(res.Body)
 
-		//LIFO order:  if there is deferred in all of them
-		//Last In First Out
-
+	if err != nil{
+		log.Fatal(err)
+	}
+	fmt.Printf("%s", robots)
 }	
 
 
