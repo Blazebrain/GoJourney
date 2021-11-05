@@ -5,8 +5,8 @@ import "fmt"
 
 
 func main (){
-	for i:= 0; i<5; i++ {
-		fmt.Println(i)
+	for i, j:= 0, 1; i<5; i, j = i+1, j + 1{
+		fmt.Println(i, j)
 	}
 }
 
