@@ -4,7 +4,7 @@ import "fmt"
 
 
 func main (){
-	switch 6 {
+	switch i:= 2+3; i {
 	case 1, 5, 7: 
 			fmt.Println("the numbers are odd")
 	case 2, 4, 6, 8: 
