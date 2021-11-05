@@ -5,10 +5,9 @@ import "fmt"
 
 
 func main (){
-	s := []int{1,2,3 ,4}
-
-	for k, v := range s{
-		fmt.Println(k, v)
+	i:= 0
+	for ; i<5; i++{
+		fmt.Println(i)
 	}
 }
 
