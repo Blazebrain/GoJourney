@@ -4,13 +4,13 @@ import "fmt"
 
 
 func main (){
-	switch 2 {
-	case 1: 
-			fmt.Println("one")
-	case 2: 
-			fmt.Println("two")
+	switch 6 {
+	case 1, 5, 7: 
+			fmt.Println("the numbers are odd")
+	case 2, 4, 6, 8: 
+			fmt.Println("the numbers are even")
 	default:
-			fmt.Println("not one or two")
+			fmt.Println("neither or higher scope")
 		 
 	}
 }
