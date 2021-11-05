@@ -5,16 +5,10 @@ import "fmt"
 
 
 func main (){
-	//Adding labels for loop
-Loop:	
-	for i:=1;i <=3; i++ {
-			for j:=1; j<=3; j++{
-				fmt.Println(i * j)
+	s := []int{1,2,3 ,4}
 
-				if i*j >=3{
-					break Loop
-				}
-			}
+	for k, v := range s{
+		fmt.Println(k, v)
 	}
 }
 
