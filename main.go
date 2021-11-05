@@ -1,15 +1,11 @@
 package main
 
-import "fmt"
-
 
 
 func main (){
-	s := []int{1,2,3 ,4}
-
-	for _, v := range s{
-		fmt.Println( v)
-	}
+	//Defer : invoke function but defer it's applicationi to later
+	//Panic: point where application enters stae where it cannot continue to run
+	//Recover: how to save the application when it panics
 }
 
 
