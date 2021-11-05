@@ -3,27 +3,16 @@ package main
 import "fmt"
 
 
-func main(){
-
-	number := 50
-	guess := 70
-
-	if guess < number {
-		fmt.Println("Too low")
-	} else  if guess > number {
-		fmt.Println("Too high")
-	} else{ 
-		fmt.Println("Perfect!")
+func main (){
+	switch 2 {
+	case 1: 
+			fmt.Println("one")
+	case 2: 
+			fmt.Println("two")
+	default:
+			fmt.Println("not one or two")
+		 
 	}
-
-	fmt.Println(number<=guess, number>=guess, number !=guess)
-
 }
-
-func returnTrue() bool{
-	fmt.Println("returning true")
-	return true
-}
-
 
 
