@@ -7,9 +7,12 @@ import (
 
 
 func main (){
-	a , b := 1, 0
-	ans := a/b
-	fmt.Println(ans)
+	a := 42
+	 b := a
+
+	 fmt.Println(a,b)
+	 a = 27
+	 fmt.Println(a,b)
 
 }
 
