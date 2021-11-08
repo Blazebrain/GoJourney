@@ -7,13 +7,14 @@ import (
 
 
 func main (){
-	a := 42
-	 b := a
+	for i:= 0; i<=5; i++{
+		sayMessage("Hello Go", i)
 
-	 fmt.Println(a,b)
-	 a = 27
-	 fmt.Println(a,b)
+	}
 
 }
-
+func sayMessage(msg string, i int){
+	fmt.Println(msg)
+	fmt.Println("The value of index is", i)
+}
 
