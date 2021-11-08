@@ -7,17 +7,12 @@ import (
 
 
 
-func main (){
-	//concurrency is the ability of an application to 
-	//run multiple things at the same time
+func main(){
+	var msg = "hello"
 
-	go sayHello()
-	time.Sleep(100 *time.Millisecond)
-}
-
-
-
-
-func sayHello (){
-	fmt.Println("Hello")
+	go func(msg string){
+		fmt.Println(msg)
+	}(msg)
+	msg = "Goodbye"
+	time.Sleep(100*time.Millisecond)
 }
