@@ -20,6 +20,7 @@ func main(){
 	}(ch)
 	go func (ch chan <- int){
 		ch <- 42
+		close(ch)
 		ch <- 27
 		close(ch)
 		wg.Done()
