@@ -14,11 +14,10 @@ func sum(values ...int){
 	fmt.Println(values)
 	result :=0
 
-
-	for i:=0; i < len(values); i++{
-		println(values[i])
-		result += values[i]
+	for _,v:= range values{
+		result += v
 	}
+
 
 	fmt.Println("The result is", result)
 }
