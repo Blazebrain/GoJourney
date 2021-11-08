@@ -1,24 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 
 
-func main(){
-	var w Writer = ConsoleWriter{}
-	w.Write([]byte("Hello World!"))
+func main (){
+		var a int = 42
+		// & refers to address of * refers to de-referencing operator
+		var b *int = &a
+		fmt.Println(a,*b)
 }
 
-//Interface describes behaviours not types
-type Writer interface {
-	Write([]byte) (int, error)
-}
 
-type ConsoleWriter struct{}
-
-//creating methods: basically functions with a context
-
-func (cw ConsoleWriter) Write(data []byte) (int, error){
-	n,err := fmt.Println(string(data))
-	return n,err
-}
