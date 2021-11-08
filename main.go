@@ -1,25 +1,24 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 
 
 func main(){
-	d, err:= divide(5.0, 0.0)
-
-	if err !=nil {
-		fmt.Println(err)
-		return
-	}
-	fmt.Println(d)
+	var w Writer = ConsoleWriter{}
+	w.Write([]byte("Hello World!"))
 }
 
+//Interface describes behaviours not types
+type Writer interface {
+	Write([]byte) (int, error)
+}
 
-func divide(a, b float64)(float64, error){
-		if b == 0.0{
-			return 0.0, fmt.Errorf("Cannot divide by zero")
-		}
-		return a/b, nil
+type ConsoleWriter struct{}
+
+//creating methods: basically functions with a context
+
+func (cw ConsoleWriter) Write(data []byte) (int, error){
+	n,err := fmt.Println(string(data))
+	return n,err
 }
