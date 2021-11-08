@@ -21,6 +21,7 @@ func main(){
 	go func (ch chan <- int){
 		ch <- 42
 		ch <- 27
+		close(ch)
 		wg.Done()
 	}(ch)
 	wg.Wait()
