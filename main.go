@@ -2,15 +2,22 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 
 
 func main (){
-		var a int = 42
-		// & refers to address of * refers to de-referencing operator
-		var b *int = &a
-		fmt.Println(a,*b)
+	//concurrency is the ability of an application to 
+	//run multiple things at the same time
+
+	go sayHello()
+	time.Sleep(100 *time.Millisecond)
 }
 
 
+
+
+func sayHello (){
+	fmt.Println("Hello")
+}
