@@ -8,12 +8,18 @@ import (
 var wg = sync.WaitGroup{}
 
 func main(){
-	var msg = "hello"
-	wg.Add(1)
-	go func(msg string){
-		fmt.Println(msg)
+	ch := make(chan int)
+	wg.Add(2)
+	//Receiving goroutine
+	go func (){
+		i:= <- ch
+		fmt.Println(i)
 		wg.Done()
-	}(msg)
-	msg = "Goodbye"
+	}()
+	//sending goroutine
+	go func (){
+		ch <- 42
+		wg.Done()
+	}()
 	wg.Wait()
 }
